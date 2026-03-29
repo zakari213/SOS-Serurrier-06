@@ -3,178 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serrurier Urgence 24/7 | Intervention 30 min - Expert Agréé</title>
+    <title>Serrurier Urgence 24/7 | Expert Agréé Assurances</title>
     
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      
-      // Configuration par défaut (tout refusé avant le clic)
       gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_ads_optimization': 'denied',
-        'ad_personalization': 'denied',
+        'ad_storage': 'denied', 'ad_user_data': 'denied',
+        'ad_ads_optimization': 'denied', 'ad_personalization': 'denied',
         'analytics_storage': 'denied'
       });
     </script>
-    
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17776892300"></script>
     <script>
       gtag('js', new Date());
       gtag('config', 'AW-17776892300');
     </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
     <style>
         :root { 
-            --accent-red: #dc2626;
-            --accent-green: #16a34a;
-            --bg-dark: #0f172a;
-            --text-main: #1e293b;
-            --white: #ffffff;
-            --soft-gray: #f8fafc;
+            --primary: #0f172a; /* Bleu Nuit très classe */
+            --accent: #e11d48;  /* Rouge Cerise moderne */
+            --success: #10b981; /* Vert Émeraude */
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
         }
         
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-main); background: var(--white); line-height: 1.5; padding-bottom: 80px; }
+        * { margin:0; padding:0; box-sizing:border-box; -webkit-font-smoothing: antialiased; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-dark); background: white; line-height: 1.6; }
 
-        /* Header */
+        /* Header Minimaliste */
         .header { 
-            background: var(--white); padding: 15px 20px; 
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            padding: 15px 5%; 
             position: sticky; top:0; z-index:1000; 
             display: flex; justify-content: space-between; align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
-        .logo { font-weight: 800; font-size: 1.2rem; }
-        .logo span { color: var(--accent-red); }
+        .logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; color: var(--primary); }
+        .logo span { color: var(--accent); }
 
-        /* Hero */
-        .hero { padding: 40px 20px; text-align: center; background: radial-gradient(circle at top, #f8fafc, #e2e8f0); }
-        .status-green { color: var(--accent-green); font-weight: 800; margin-bottom: 10px; display: block; font-size: 1rem; }
-        .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 15px; color: var(--bg-dark); }
-        .hero p { font-size: 1.1rem; margin-bottom: 25px; max-width: 700px; margin: 0 auto 25px; color: #475569; }
+        /* Hero Luxe */
+        .hero { 
+            padding: 60px 20px; text-align: center;
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+        }
+        .status-pill { 
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(16, 185, 129, 0.1); color: var(--success);
+            padding: 6px 16px; border-radius: 100px; font-weight: 700;
+            font-size: 0.85rem; margin-bottom: 25px;
+        }
+        .status-pill::before { content: ""; width: 8px; height: 8px; background: var(--success); border-radius: 50%; animation: pulse 2s infinite; }
         
-        /* CTA & Assurance Tag */
-        .cta-box { display: flex; flex-direction: column; align-items: center; gap: 0; }
-        .cta-main { 
-            background: var(--accent-red); color: #fff; padding: 20px 30px; border-radius: 12px 12px 0 0; 
-            font-weight: 800; text-decoration: none; width: 100%; max-width: 380px;
-        }
-        .cta-main span { font-size: 1.8rem; display: block; margin-top: 5px; }
-        .insurance-tag { 
-            background: #b91c1c; color: white; width: 100%; max-width: 380px; 
-            padding: 8px; font-size: 0.8rem; font-weight: 700; border-radius: 0 0 12px 12px;
-            letter-spacing: 0.5px;
-        }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
 
-        /* Services */
-        .grid-container { padding: 40px 20px; max-width: 1100px; margin: 0 auto; }
-        .bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .bento-item { background: var(--soft-gray); padding: 25px; border-radius: 20px; border: 1px solid #e2e8f0; }
+        .hero h1 { font-size: 2.5rem; font-weight: 800; color: var(--primary); margin-bottom: 20px; line-height: 1.1; }
+        .hero p { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 35px; }
         
-        /* Footer & Mentions */
-        .footer-content { background: #f1f5f9; padding: 40px 20px; border-top: 1px solid #e2e8f0; font-size: 0.85rem; color: #64748b; }
-        .mentions-section { max-width: 1100px; margin: 0 auto; text-align: left; }
-        .mentions-section h4 { color: var(--bg-dark); margin-bottom: 10px; }
-        .insurance-footer { text-align: center; padding-bottom: 30px; font-weight: 800; color: #475569; }
-
-        /* Cookie Banner */
-        #cookie-banner {
-            position: fixed; bottom: 85px; left: 20px; right: 20px; 
-            background: var(--bg-dark); color: white; padding: 20px; 
-            border-radius: 16px; z-index: 3000; display: none;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        /* Bouton & Badge */
+        .cta-wrapper { display: flex; flex-direction: column; align-items: center; transition: transform 0.2s; }
+        .cta-wrapper:active { transform: scale(0.98); }
+        
+        .cta-btn { 
+            background: var(--accent); color: white; padding: 22px 45px;
+            border-radius: 18px; text-decoration: none; font-weight: 800;
+            width: 100%; max-width: 400px; box-shadow: 0 15px 30px rgba(225, 29, 72, 0.25);
         }
-        .cookie-btns { display: flex; gap: 10px; margin-top: 15px; }
-        .btn-cookie { flex: 1; padding: 12px; border-radius: 8px; border: none; font-weight: 700; cursor: pointer; }
-        .btn-accept { background: var(--accent-green); color: white; }
-        .btn-refuse { background: #475569; color: white; }
+        .cta-btn span { font-size: 1.8rem; display: block; letter-spacing: 1px; }
+        
+        .badge-red { 
+            background: var(--primary); color: white; width: 100%; max-width: 360px;
+            padding: 10px; font-size: 0.75rem; font-weight: 600; border-radius: 0 0 14px 14px;
+            text-transform: uppercase; letter-spacing: 1px; margin-top: -5px;
+        }
 
-        /* Sticky Call Mobile */
-        .sticky-action { position: fixed; bottom: 0; left: 0; right: 0; background: var(--white); padding: 12px; display: flex; z-index: 2000; box-shadow: 0 -5px 20px rgba(0,0,0,0.1); }
-        .btn-call-fixed { flex: 1; background: var(--accent-red); color: #fff; text-align: center; padding: 16px; border-radius: 10px; font-weight: 800; text-decoration: none; }
+        /* Bento Grid */
+        .services { padding: 50px 5%; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { 
+            background: white; padding: 30px; border-radius: 24px;
+            border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+            transition: all 0.3s;
+        }
+        .card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        .card h3 { font-size: 1.25rem; margin-bottom: 12px; color: var(--primary); }
+        .card p { color: var(--text-muted); font-size: 0.95rem; }
 
-        @media (min-width: 768px) {
-            .hero h1 { font-size: 3.2rem; }
-            .sticky-action { display: none; }
-            #cookie-banner { width: 400px; left: auto; right: 20px; }
+        /* Footer Assurances */
+        .insurance-grid { background: #f8fafc; padding: 60px 20px; text-align: center; border-top: 1px solid #eee; }
+        .insurance-grid h4 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 30px; }
+        .logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; opacity: 0.5; font-weight: 700; color: var(--primary); }
+
+        /* Mentions & Cookies */
+        .footer-legal { background: white; padding: 40px 5%; font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid #f1f5f9; margin-bottom: 80px; }
+        
+        #cookie-msg {
+            position: fixed; bottom: 100px; left: 20px; right: 20px; 
+            background: var(--primary); color: white; padding: 20px; 
+            border-radius: 20px; z-index: 3000; display: none; max-width: 400px;
+        }
+        .ck-btns { display: flex; gap: 10px; margin-top: 15px; }
+        .ck-btn { flex: 1; padding: 12px; border-radius: 12px; border: none; font-weight: 700; cursor: pointer; }
+        .ck-accept { background: var(--accent); color: white; }
+        .ck-refuse { background: transparent; border: 1px solid rgba(255,255,255,0.2); color: white; }
+
+        /* Mobile Call Button */
+        .mobile-bar { position: fixed; bottom: 0; left: 0; right: 0; background: white; padding: 15px; display: flex; z-index: 2000; box-shadow: 0 -10px 30px rgba(0,0,0,0.05); }
+        .btn-call { flex: 1; background: var(--accent); color: white; text-align: center; padding: 18px; border-radius: 16px; font-weight: 800; text-decoration: none; font-size: 1.1rem; }
+
+        @media (min-width: 1024px) {
+            .hero h1 { font-size: 4rem; }
+            .mobile-bar { display: none; }
+            .header { padding: 25px 10%; }
         }
     </style>
 </head>
 <body>
 
 <header class="header">
-    <div class="logo">🆘 SERRURIER <span>URGENCE 24/7</span></div>
-    <a href="tel:0753673866" style="text-decoration:none; color:var(--accent-red); font-weight:800;">07 53 67 38 66</a>
+    <div class="logo">🆘 SERRURIER <span>24/7</span></div>
+    <a href="tel:0753673866" style="text-decoration:none; color:var(--primary); font-weight:800; font-size: 1.1rem;">07 53 67 38 66</a>
 </header>
 
 <section class="hero">
-    <span class="status-green">● Intervention en 30 minute serrurier a 12 km de chez vous</span>
-    <h1>Serrurier Urgence 24/7</h1>
-    <p>Porte claquée, serrure cassée, ou forcée ? Notre équipe intervient en urgence dans votre secteur 24/7.</p>
+    <div class="status-pill">Intervention en 30 minute serrurier a 12 km de chez vous</div>
+    <h1>Expert en Serrurerie<br>Urgence & Sécurité</h1>
+    <p>Porte claquée, serrure cassée, ou forcée ? Notre équipe de confiance intervient en urgence dans votre secteur 24/7.</p>
     
-    <div class="cta-box">
-        <a href="tel:0753673866" class="cta-main">
-            APPEL URGENCE
+    <div class="cta-wrapper">
+        <a href="tel:0753673866" class="cta-btn">
+            APPELER MAINTENANT
             <span>07 53 67 38 66</span>
         </a>
-        <div class="insurance-tag">AGRÉÉ ASSURANCES : ALLIANZ, AXA, MAIF...</div>
+        <div class="badge-red">Agréé Assurances Françaises</div>
     </div>
 </section>
 
-<div class="grid-container">
-    <div class="bento-grid">
-        <div class="bento-item"><h3>🔑 Porte Claquée</h3><p>Ouverture express sans destruction. Techniciens équipés pour toutes marques.</p></div>
-        <div class="bento-item"><h3>🔒 Serrure Cassée</h3><p>Remplacement de cylindre et mise en sécurité immédiate après diagnostic.</p></div>
-        <div class="bento-item"><h3>🛡️ Porte Forcée</h3><p>Réparation après effraction et installation de serrures haute sécurité A2P.</p></div>
+<div class="services">
+    <div class="card">
+        <h3>🔑 Ouverture de Porte</h3>
+        <p>Techniques non-destructives pour portes claquées ou verrouillées. Intervention express.</p>
+    </div>
+    <div class="card">
+        <h3>🔒 Serrure & Cylindre</h3>
+        <p>Remplacement immédiat toutes marques. Pose de serrures haute sécurité certifiées A2P.</p>
+    </div>
+    <div class="card">
+        <h3>🛡️ Mise en Sécurité</h3>
+        <p>Réparation après effraction, fermeture provisoire et blindage de porte.</p>
     </div>
 </div>
 
-<div class="insurance-footer">
-    AGRÉÉ TOUTES ASSURANCES EN FRANCE
-</div>
+<section class="insurance-grid">
+    <h4>Partenaire des assurances</h4>
+    <div class="logos">
+        <span>AXA</span> <span>ALLIANZ</span> <span>MAIF</span> <span>MACIF</span> <span>GROUPAMA</span> <span>GMF</span>
+    </div>
+</section>
 
-<footer class="footer-content">
-    <div class="mentions-section">
-        <h4>Mentions Légales</h4>
-        <p><strong>Éditeur :</strong> SOS Serrurier Services - 06 Alpes-Maritimes & 83 Var.</p>
-        <p><strong>Hébergement :</strong> Github Pages / Google Infrastructure.</p>
-        <p><strong>Protection des données :</strong> Conformément au RGPD, aucune donnée personnelle n'est conservée sans votre consentement via le bandeau cookie.</p>
-        <p><strong>Tarifs :</strong> Tarification selon intervention, majoration possible nuit et jours fériés.</p>
+<footer class="footer-legal">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <p><strong>Mentions Légales :</strong> SOS Serrurier Services. Intervention 24h/24 et 7j/7. TVA non applicable (Art. 293B du CGI). Hébergement : Github/Google. Le déplacement et la main d'œuvre sont calculés selon la distance et l'heure d'intervention.</p>
+        <p style="margin-top:10px;">© 2026 Expert Serrurerie - Tous droits réservés.</p>
     </div>
 </footer>
 
-<div id="cookie-banner">
-    <p><strong>Gestion des cookies</strong><br>Nous utilisons des cookies pour analyser notre trafic et optimiser vos appels d'urgence.</p>
-    <div class="cookie-btns">
-        <button class="btn-cookie btn-refuse" onclick="handleConsent('denied')">Refuser</button>
-        <button class="btn-cookie btn-accept" onclick="handleConsent('granted')">Accepter</button>
+<div id="cookie-msg">
+    <p><strong>Confidentialité</strong><br>Nous utilisons des cookies pour améliorer votre expérience d'urgence.</p>
+    <div class="ck-btns">
+        <button class="ck-btn ck-refuse" onclick="setConsent('denied')">Refuser</button>
+        <button class="ck-btn ck-accept" onclick="setConsent('granted')">Accepter</button>
     </div>
 </div>
 
-<div class="sticky-action">
-    <a href="tel:0753673866" class="btn-call-fixed">📞 CLIQUER POUR APPELER : 07 53 67 38 66</a>
+<div class="mobile-bar">
+    <a href="tel:0753673866" class="btn-call">📞 APPEL D'URGENCE : 07 53 67 38 66</a>
 </div>
 
 <script>
-    // Logique Cookie Consent Mode V2
-    function handleConsent(status) {
+    function setConsent(status) {
         gtag('consent', 'update', {
-            'ad_storage': status,
-            'ad_user_data': status,
-            'ad_ads_optimization': status,
-            'ad_personalization': status,
+            'ad_storage': status, 'ad_user_data': status,
+            'ad_ads_optimization': status, 'ad_personalization': status,
             'analytics_storage': status
         });
-        localStorage.setItem('cookieConsent', status);
-        document.getElementById('cookie-banner').style.display = 'none';
+        localStorage.setItem('cookieChoice', status);
+        document.getElementById('cookie-msg').style.display = 'none';
     }
-
-    // Afficher le bandeau si pas de choix stocké
     window.onload = function() {
-        if (!localStorage.getItem('cookieConsent')) {
-            document.getElementById('cookie-banner').style.display = 'block';
+        if (!localStorage.getItem('cookieChoice')) {
+            document.getElementById('cookie-msg').style.display = 'block';
         }
     };
 </script>
