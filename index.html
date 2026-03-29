@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serrurier Urgence 24/7 | Expert Agréé Assurances</title>
+    <title>Serrurier Urgence 24/7 | 07 53 67 38 66</title>
     
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -20,159 +20,166 @@
       gtag('config', 'AW-17776892300');
     </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root { 
-            --primary: #0f172a; /* Bleu Nuit très classe */
-            --accent: #e11d48;  /* Rouge Cerise moderne */
-            --success: #10b981; /* Vert Émeraude */
-            --bg-light: #f8fafc;
-            --text-dark: #1e293b;
-            --text-muted: #64748b;
+            --bg-dark: #0f172a;    
+            --bg-card: #1e293b;    
+            --accent-red: #FF0000; /* ROUGE POMPIER */
+            --success-green: #22c55e;
+            --text-white: #ffffff;
+            --text-gray: #94a3b8;
         }
         
         * { margin:0; padding:0; box-sizing:border-box; -webkit-font-smoothing: antialiased; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-dark); background: white; line-height: 1.6; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-white); background-color: var(--bg-dark); line-height: 1.5; overflow-x: hidden; }
 
-        /* Header Minimaliste */
+        /* Header */
         .header { 
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(12px);
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
             padding: 15px 5%; 
             position: sticky; top:0; z-index:1000; 
             display: flex; justify-content: space-between; align-items: center;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
-        .logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; color: var(--primary); }
-        .logo span { color: var(--accent); }
+        .logo { font-weight: 800; font-size: 1.1rem; }
+        .logo span { color: var(--accent-red); }
 
-        /* Hero Luxe */
-        .hero { 
-            padding: 60px 20px; text-align: center;
-            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
-        }
+        /* Hero */
+        .hero { padding: 60px 20px; text-align: center; }
         .status-pill { 
-            display: inline-flex; align-items: center; gap: 8px;
-            background: rgba(16, 185, 129, 0.1); color: var(--success);
-            padding: 6px 16px; border-radius: 100px; font-weight: 700;
-            font-size: 0.85rem; margin-bottom: 25px;
+            display: inline-block; color: var(--success-green); font-weight: 800;
+            font-size: 0.9rem; margin-bottom: 20px; text-transform: uppercase;
         }
-        .status-pill::before { content: ""; width: 8px; height: 8px; background: var(--success); border-radius: 50%; animation: pulse 2s infinite; }
-        
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
 
-        .hero h1 { font-size: 2.5rem; font-weight: 800; color: var(--primary); margin-bottom: 20px; line-height: 1.1; }
-        .hero p { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 35px; }
+        .hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 20px; line-height: 1.1; color: var(--text-white); }
+        .hero p { font-size: 1.1rem; color: var(--text-gray); max-width: 600px; margin: 0 auto 30px; }
         
-        /* Bouton & Badge */
-        .cta-wrapper { display: flex; flex-direction: column; align-items: center; transition: transform 0.2s; }
-        .cta-wrapper:active { transform: scale(0.98); }
-        
+        /* CTA & Bandeau Défilant 1 (Sous bouton) */
+        .cta-container { width: 100%; max-width: 450px; margin: 0 auto; position: relative; }
         .cta-btn { 
-            background: var(--accent); color: white; padding: 22px 45px;
-            border-radius: 18px; text-decoration: none; font-weight: 800;
-            width: 100%; max-width: 400px; box-shadow: 0 15px 30px rgba(225, 29, 72, 0.25);
+            background: var(--accent-red); color: white; padding: 20px;
+            border-radius: 15px 15px 0 0; text-decoration: none; font-weight: 800;
+            display: block; box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
         }
-        .cta-btn span { font-size: 1.8rem; display: block; letter-spacing: 1px; }
+        .cta-btn span { font-size: 1.8rem; display: block; margin-top: 5px; }
         
-        .badge-red { 
-            background: var(--primary); color: white; width: 100%; max-width: 360px;
-            padding: 10px; font-size: 0.75rem; font-weight: 600; border-radius: 0 0 14px 14px;
-            text-transform: uppercase; letter-spacing: 1px; margin-top: -5px;
+        /* Animation Défilante Commune */
+        .marquee-container {
+            background: #fff; color: #000; overflow: hidden;
+            white-space: nowrap; padding: 8px 0; font-weight: 700; font-size: 0.8rem;
+        }
+        .cta-marquee { border-radius: 0 0 15px 15px; background: #e2e8f0; } /* Gris clair sous le bouton */
+
+        .marquee-content {
+            display: inline-block; animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
-        /* Bento Grid */
-        .services { padding: 50px 5%; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        /* Services Grid */
+        .services-title { text-align: center; margin-top: 60px; font-weight: 800; color: var(--text-white); }
+        .grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 15px; padding: 40px 5%; max-width: 1200px; margin: 0 auto; 
+        }
         .card { 
-            background: white; padding: 30px; border-radius: 24px;
-            border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
-            transition: all 0.3s;
+            background: var(--bg-card); padding: 25px; border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.05); text-align: center;
         }
-        .card:hover { border-color: var(--accent); transform: translateY(-5px); }
-        .card h3 { font-size: 1.25rem; margin-bottom: 12px; color: var(--primary); }
-        .card p { color: var(--text-muted); font-size: 0.95rem; }
+        .card h3 { font-size: 1.1rem; margin-bottom: 10px; color: var(--accent-red); }
+        .card p { font-size: 0.9rem; color: var(--text-gray); }
 
-        /* Footer Assurances */
-        .insurance-grid { background: #f8fafc; padding: 60px 20px; text-align: center; border-top: 1px solid #eee; }
-        .insurance-grid h4 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 30px; }
-        .logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; opacity: 0.5; font-weight: 700; color: var(--primary); }
+        /* Bandeau Assurances Bas de Page */
+        .footer-marquee { 
+            position: relative; background: var(--accent-red); color: white; 
+            padding: 15px 0; margin-top: 50px; font-size: 1rem;
+        }
 
         /* Mentions & Cookies */
-        .footer-legal { background: white; padding: 40px 5%; font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid #f1f5f9; margin-bottom: 80px; }
+        .footer-legal { padding: 40px 5% 100px; font-size: 0.8rem; color: var(--text-gray); text-align: center; }
         
         #cookie-msg {
-            position: fixed; bottom: 100px; left: 20px; right: 20px; 
-            background: var(--primary); color: white; padding: 20px; 
-            border-radius: 20px; z-index: 3000; display: none; max-width: 400px;
+            position: fixed; bottom: 90px; left: 20px; right: 20px; 
+            background: white; color: black; padding: 20px; 
+            border-radius: 15px; z-index: 3000; display: none; max-width: 400px;
         }
         .ck-btns { display: flex; gap: 10px; margin-top: 15px; }
-        .ck-btn { flex: 1; padding: 12px; border-radius: 12px; border: none; font-weight: 700; cursor: pointer; }
-        .ck-accept { background: var(--accent); color: white; }
-        .ck-refuse { background: transparent; border: 1px solid rgba(255,255,255,0.2); color: white; }
+        .ck-btn { flex: 1; padding: 12px; border-radius: 10px; border: none; font-weight: 700; cursor: pointer; }
+        .ck-accept { background: var(--accent-red); color: white; }
+        .ck-refuse { background: #cbd5e1; }
 
-        /* Mobile Call Button */
-        .mobile-bar { position: fixed; bottom: 0; left: 0; right: 0; background: white; padding: 15px; display: flex; z-index: 2000; box-shadow: 0 -10px 30px rgba(0,0,0,0.05); }
-        .btn-call { flex: 1; background: var(--accent); color: white; text-align: center; padding: 18px; border-radius: 16px; font-weight: 800; text-decoration: none; font-size: 1.1rem; }
+        /* Mobile Call Sticky */
+        .mobile-bar { 
+            position: fixed; bottom: 0; left: 0; right: 0; background: var(--bg-dark); 
+            padding: 12px; display: flex; z-index: 2000; border-top: 1px solid rgba(255,255,255,0.1); 
+        }
+        .btn-call-sticky { 
+            flex: 1; background: var(--accent-red); color: white; text-align: center; 
+            padding: 18px; border-radius: 12px; font-weight: 800; text-decoration: none; font-size: 1.1rem; 
+        }
 
         @media (min-width: 1024px) {
-            .hero h1 { font-size: 4rem; }
+            .hero h1 { font-size: 3.5rem; }
             .mobile-bar { display: none; }
-            .header { padding: 25px 10%; }
         }
     </style>
 </head>
 <body>
 
 <header class="header">
-    <div class="logo">🆘 SERRURIER <span>24/7</span></div>
-    <a href="tel:0753673866" style="text-decoration:none; color:var(--primary); font-weight:800; font-size: 1.1rem;">07 53 67 38 66</a>
+    <div class="logo">🆘 SERRURIER <span>URGENCE 24/7</span></div>
+    <a href="tel:0753673866" style="text-decoration:none; color:var(--text-white); font-weight:800;">07 53 67 38 66</a>
 </header>
 
 <section class="hero">
-    <div class="status-pill">Intervention en 30 minute serrurier a 12 km de chez vous</div>
-    <h1>Expert en Serrurerie<br>Urgence & Sécurité</h1>
-    <p>Porte claquée, serrure cassée, ou forcée ? Notre équipe de confiance intervient en urgence dans votre secteur 24/7.</p>
+    <div class="status-pill">● Intervention en 30 minute serrurier a 12 km de chez vous</div>
+    <h1>Serrurier Urgence 24/7</h1>
+    <p>Porte claquée, serrure cassée, ou forcée ? Notre équipe intervient en urgence dans votre secteur 24/7.</p>
     
-    <div class="cta-wrapper">
+    <div class="cta-container">
         <a href="tel:0753673866" class="cta-btn">
             APPELER MAINTENANT
             <span>07 53 67 38 66</span>
         </a>
-        <div class="badge-red">Agréé Assurances Françaises</div>
+        <div class="marquee-container cta-marquee">
+            <div class="marquee-content">
+                AGRÉÉ TOUTES ASSURANCES FRANCE — ALLIANZ — AXA — MAIF — MACIF — GROUPAMA — GMF — MATMUT — AGRÉÉ TOUTES ASSURANCES FRANCE — ALLIANZ — AXA — MAIF — MACIF — GROUPAMA — GMF — MATMUT — 
+            </div>
+        </div>
     </div>
 </section>
 
-<div class="services">
-    <div class="card">
-        <h3>🔑 Ouverture de Porte</h3>
-        <p>Techniques non-destructives pour portes claquées ou verrouillées. Intervention express.</p>
-    </div>
-    <div class="card">
-        <h3>🔒 Serrure & Cylindre</h3>
-        <p>Remplacement immédiat toutes marques. Pose de serrures haute sécurité certifiées A2P.</p>
-    </div>
-    <div class="card">
-        <h3>🛡️ Mise en Sécurité</h3>
-        <p>Réparation après effraction, fermeture provisoire et blindage de porte.</p>
+<h2 class="services-title">NOS SERVICES D'URGENCE</h2>
+<div class="grid">
+    <div class="card"><h3>🔑 Ouverture de porte</h3><p>Ouverture fine sans dégâts pour portes claquées ou verrouillées.</p></div>
+    <div class="card"><h3>🔒 Changement de serrure</h3><p>Remplacement de cylindre toutes marques (Vachette, Fichet, Picard...).</p></div>
+    <div class="card"><h3>🛡️ Blindage de porte</h3><p>Renforcement de votre sécurité avec blindage et cornières anti-pinces.</p></div>
+    <div class="card"><h3>🏬 Volet & Rideau métal</h3><p>Déblocage et réparation de vos fermetures commerciales ou garage.</p></div>
+    <div class="card"><h3>📬 Boite au lettre</h3><p>Ouverture et remplacement de serrure de boîte aux lettres.</p></div>
+    <div class="card"><h3>💎 Coffre-fort</h3><p>Service d'ouverture technique pour coffres et armoires fortes.</p></div>
+    <div class="card"><h3>🪟 Verrous fenêtres</h3><p>Installation de verrous haute sécurité pour vos accès vitrés.</p></div>
+    <div class="card"><h3>🚪 Ferme-portes</h3><p>Installation et réglage de grooms pour accès copropriété.</p></div>
+</div>
+
+<div class="footer-marquee">
+    <div class="marquee-container" style="background:transparent; color:white; font-size:1.1rem;">
+        <div class="marquee-content">
+            INTERVENTION EXPRESS EN 30 MINUTES — DISPONIBLE 24H/24 ET 7J/7 — SERRURIER AGRÉÉ ASSURANCES — DEVIS GRATUIT SUR PLACE — INTERVENTION EXPRESS EN 30 MINUTES — DISPONIBLE 24H/24 ET 7J/7 — SERRURIER AGRÉÉ ASSURANCES — DEVIS GRATUIT SUR PLACE — 
+        </div>
     </div>
 </div>
 
-<section class="insurance-grid">
-    <h4>Partenaire des assurances</h4>
-    <div class="logos">
-        <span>AXA</span> <span>ALLIANZ</span> <span>MAIF</span> <span>MACIF</span> <span>GROUPAMA</span> <span>GMF</span>
-    </div>
-</section>
-
 <footer class="footer-legal">
-    <div style="max-width: 1200px; margin: 0 auto;">
-        <p><strong>Mentions Légales :</strong> SOS Serrurier Services. Intervention 24h/24 et 7j/7. TVA non applicable (Art. 293B du CGI). Hébergement : Github/Google. Le déplacement et la main d'œuvre sont calculés selon la distance et l'heure d'intervention.</p>
-        <p style="margin-top:10px;">© 2026 Expert Serrurerie - Tous droits réservés.</p>
-    </div>
+    <p><strong>Mentions Légales :</strong> SOS Serrurier Services. Intervention d'urgence 24h/24 et 7j/7. TVA non applicable (Art. 293B du CGI). Hébergement : Github/Google. Agrément assurances françaises. Un devis est systématiquement remis avant chaque intervention.</p>
+    <p style="margin-top:10px;">© 2026 Expert Serrurerie - Tous droits réservés.</p>
 </footer>
 
 <div id="cookie-msg">
-    <p><strong>Confidentialité</strong><br>Nous utilisons des cookies pour améliorer votre expérience d'urgence.</p>
+    <p><strong>Gestion des Cookies (V2)</strong><br>Nous utilisons des cookies pour optimiser votre appel d'urgence.</p>
     <div class="ck-btns">
         <button class="ck-btn ck-refuse" onclick="setConsent('denied')">Refuser</button>
         <button class="ck-btn ck-accept" onclick="setConsent('granted')">Accepter</button>
@@ -180,7 +187,7 @@
 </div>
 
 <div class="mobile-bar">
-    <a href="tel:0753673866" class="btn-call">📞 APPEL D'URGENCE : 07 53 67 38 66</a>
+    <a href="tel:0753673866" class="btn-call-sticky">📞 APPEL D'URGENCE : 07 53 67 38 66</a>
 </div>
 
 <script>
