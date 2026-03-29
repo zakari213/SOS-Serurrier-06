@@ -3,262 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serrurier Urgence 24/7 | Intervention 30 min - Expert Agréé</title>
     
-    <title>SOS Serrurier — Urgence Dépannage 24h/24 7j/7 Partout en France</title>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      // Configuration par défaut (tout refusé avant le clic)
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_ads_optimization': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      });
+    </script>
     
-    <meta name="description" content="SOS Serrurier : Expert en dépannage d'urgence serrurerie partout en France. Intervention 24h/24. Ouverture de porte, coffre-fort, rideaux métalliques et blindage.">
-    
-    <link rel="canonical" href="https://sosserrurier.netlify.app" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "SOS Serrurier France",
-      "telephone": "+33753673866",
-      "priceRange": "€€",
-      "areaServed": {
-        "@type": "Country",
-        "name": "France"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "FR"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "00:00",
-        "closes": "23:59"
-      }
-    }
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17776892300"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'AW-17776892300');
     </script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root { 
-            --accent: #dc2626; 
-            --bg-dark: #0f172a; 
+            --accent-red: #dc2626;
+            --accent-green: #16a34a;
+            --bg-dark: #0f172a;
             --text-main: #1e293b;
             --white: #ffffff;
             --soft-gray: #f8fafc;
-            --dispo-green: #10b981; 
         }
-
+        
         * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-main); background: var(--white); line-height: 1.6; padding-bottom: 120px; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-main); background: var(--white); line-height: 1.5; padding-bottom: 80px; }
 
-        /* --- MARQUEE ASSURANCES --- */
-        .marquee-wrapper { background: var(--soft-gray); padding: 10px 0; overflow: hidden; border-bottom: 1px solid #eee; }
-        .marquee-wrapper.bottom { border-top: 1px solid #eee; border-bottom: none; padding: 30px 0; }
-        .marquee { display: flex; width: 200%; animation: scroll 25s linear infinite; align-items: center; }
-        .marquee span { width: 12.5%; font-weight: 900; font-size: 1.1rem; color: #cbd5e1; text-align: center; letter-spacing: 1px; flex-shrink: 0; }
-        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        /* Header */
+        .header { 
+            background: var(--white); padding: 15px 20px; 
+            position: sticky; top:0; z-index:1000; 
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo { font-weight: 800; font-size: 1.2rem; }
+        .logo span { color: var(--accent-red); }
 
-        /* --- HEADER --- */
-        .header { background: var(--bg-dark); color: #fff; padding: 15px 20px; position: sticky; top:0; z-index:1000; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 800; font-size: 1.4rem; }
-        .logo span { color: var(--accent); }
-        .nav-tel { color: #fff; text-decoration: none; font-weight: 700; background: rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 50px; font-size: 0.9rem; transition: 0.3s; }
-        .nav-tel:hover { background: var(--accent); }
-
-        /* --- HERO --- */
-        .hero { padding: 80px 20px; text-align: center; background: radial-gradient(circle at center, #1e293b, #0f172a); color: #fff; }
-        .hero h1 { font-size: 2.3rem; font-weight: 800; margin-bottom: 20px; line-height: 1.2; }
-        .dispo-badge { background: rgba(16, 185, 129, 0.15); color: var(--dispo-green); padding: 8px 18px; border-radius: 50px; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.9rem; }
-        .dispo-dot { width: 10px; height: 10px; background: var(--dispo-green); border-radius: 50%; animation: pulse 2s infinite; }
-        .cta-main { background: var(--accent); color: #fff; padding: 22px 30px; border-radius: 16px; display: inline-flex; flex-direction: column; font-weight: 800; text-decoration: none; box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4); width: 100%; max-width: 350px; transition: transform 0.2s; }
-        .cta-main:hover { transform: scale(1.02); }
-        .cta-main span { font-size: 1.6rem; margin-top: 5px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 5px; }
-
-        /* --- SERVICES GRID --- */
-        .content-section { padding: 50px 20px; max-width: 1100px; margin: 0 auto; }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
-        .service-card { border-radius: 15px; padding: 30px 20px; background: var(--soft-gray); border: 1px solid #eee; text-align: center; transition: 0.3s; display: flex; flex-direction: column; justify-content: center; min-height: 150px; }
-        .service-card:hover { border-color: var(--accent); transform: translateY(-3px); background: #fff; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .service-card h3 { font-size: 1.2rem; font-weight: 700; color: var(--bg-dark); }
-        .service-card p { font-size: 0.9rem; color: var(--text-main); margin-top: 10px; }
-
-        /* --- MENTIONS LEGALES --- */
-        .legal-section { padding: 40px 20px; background: var(--soft-gray); font-size: 0.8rem; color: #64748b; border-top: 1px solid #eee; }
-        .legal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
-        .legal-grid h2 { font-size: 1rem; color: var(--bg-dark); margin-bottom: 10px; }
-
-        /* --- STICKY FOOTER --- */
-        .sticky-action { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; padding: 12px 20px; display: flex; gap: 10px; box-shadow: 0 -5px 20px rgba(0,0,0,0.1); z-index: 1500; }
-        .btn-call-fixed { flex: 2; background: var(--accent); color: #fff; text-align: center; padding: 18px; border-radius: 12px; font-weight: 800; text-decoration: none; font-size: 1.2rem; }
-        .dispo-status { flex: 1; background: var(--soft-gray); border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 5px; color: #64748b; font-weight: 700; font-size: 0.8rem; border: 1px solid #ddd; }
-
-        /* --- COOKIE CONSENT V2 --- */
-        #cookie-v2 { position: fixed; bottom: 85px; left: 20px; right: 20px; background: var(--white); border-radius: 16px; padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); z-index: 2000; display: none; border: 1px solid #e2e8f0; max-width: 500px; }
-        .cookie-title { font-weight: 800; font-size: 1.1rem; margin-bottom: 10px; color: var(--bg-dark); }
-        .cookie-text { font-size: 0.85rem; margin-bottom: 15px; color: #64748b; }
-        .cookie-btns { display: flex; gap: 10px; flex-wrap: wrap; }
-        .btn-cookie { flex: 1; padding: 12px; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; font-size: 0.85rem; transition: 0.3s; }
-        .btn-accept { background: var(--accent); color: #fff; }
-        .btn-refuse { background: #e2e8f0; color: var(--text-main); }
+        /* Hero */
+        .hero { padding: 40px 20px; text-align: center; background: radial-gradient(circle at top, #f8fafc, #e2e8f0); }
+        .status-green { color: var(--accent-green); font-weight: 800; margin-bottom: 10px; display: block; font-size: 1rem; }
+        .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 15px; color: var(--bg-dark); }
+        .hero p { font-size: 1.1rem; margin-bottom: 25px; max-width: 700px; margin: 0 auto 25px; color: #475569; }
         
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); } 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); } }
-        
-        /* RESPONSIVE DESKTOP */
-        @media (min-width: 992px) {
-            .hero h1 { font-size: 3.5rem; }
-            .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
-            #cookie-v2 { left: 30px; width: 400px; }
-            .sticky-action { padding: 15px 100px; }
+        /* CTA & Assurance Tag */
+        .cta-box { display: flex; flex-direction: column; align-items: center; gap: 0; }
+        .cta-main { 
+            background: var(--accent-red); color: #fff; padding: 20px 30px; border-radius: 12px 12px 0 0; 
+            font-weight: 800; text-decoration: none; width: 100%; max-width: 380px;
+        }
+        .cta-main span { font-size: 1.8rem; display: block; margin-top: 5px; }
+        .insurance-tag { 
+            background: #b91c1c; color: white; width: 100%; max-width: 380px; 
+            padding: 8px; font-size: 0.8rem; font-weight: 700; border-radius: 0 0 12px 12px;
+            letter-spacing: 0.5px;
         }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 1.8rem; }
-            .legal-grid { grid-template-columns: 1fr; }
+        /* Services */
+        .grid-container { padding: 40px 20px; max-width: 1100px; margin: 0 auto; }
+        .bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .bento-item { background: var(--soft-gray); padding: 25px; border-radius: 20px; border: 1px solid #e2e8f0; }
+        
+        /* Footer & Mentions */
+        .footer-content { background: #f1f5f9; padding: 40px 20px; border-top: 1px solid #e2e8f0; font-size: 0.85rem; color: #64748b; }
+        .mentions-section { max-width: 1100px; margin: 0 auto; text-align: left; }
+        .mentions-section h4 { color: var(--bg-dark); margin-bottom: 10px; }
+        .insurance-footer { text-align: center; padding-bottom: 30px; font-weight: 800; color: #475569; }
+
+        /* Cookie Banner */
+        #cookie-banner {
+            position: fixed; bottom: 85px; left: 20px; right: 20px; 
+            background: var(--bg-dark); color: white; padding: 20px; 
+            border-radius: 16px; z-index: 3000; display: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .cookie-btns { display: flex; gap: 10px; margin-top: 15px; }
+        .btn-cookie { flex: 1; padding: 12px; border-radius: 8px; border: none; font-weight: 700; cursor: pointer; }
+        .btn-accept { background: var(--accent-green); color: white; }
+        .btn-refuse { background: #475569; color: white; }
+
+        /* Sticky Call Mobile */
+        .sticky-action { position: fixed; bottom: 0; left: 0; right: 0; background: var(--white); padding: 12px; display: flex; z-index: 2000; box-shadow: 0 -5px 20px rgba(0,0,0,0.1); }
+        .btn-call-fixed { flex: 1; background: var(--accent-red); color: #fff; text-align: center; padding: 16px; border-radius: 10px; font-weight: 800; text-decoration: none; }
+
+        @media (min-width: 768px) {
+            .hero h1 { font-size: 3.2rem; }
+            .sticky-action { display: none; }
+            #cookie-banner { width: 400px; left: auto; right: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="marquee-wrapper">
-        <div class="marquee">
-            <span>AXA</span><span>ALLIANZ</span><span>MAIF</span><span>MACIF</span><span>GENERALI</span><span>MMA</span><span>MATMUT</span><span>GMF</span>
-            <span>AXA</span><span>ALLIANZ</span><span>MAIF</span><span>MACIF</span><span>GENERALI</span><span>MMA</span><span>MATMUT</span><span>GMF</span>
-        </div>
-    </div>
+<header class="header">
+    <div class="logo">🆘 SERRURIER <span>URGENCE 24/7</span></div>
+    <a href="tel:0753673866" style="text-decoration:none; color:var(--accent-red); font-weight:800;">07 53 67 38 66</a>
+</header>
 
-    <header class="header">
-        <div class="logo">🆘 SOS <span>SERRURIER</span></div>
-        <a href="tel:0753673866" class="nav-tel">07 53 67 38 66</a>
-    </header>
-
-    <section class="hero">
-        <div class="dispo-badge">
-            <span class="dispo-dot"></span>
-            Disponible Partout en France
-        </div>
-        <h1>SOS Serrurier : Urgence & Dépannage 24h/24 en France</h1>
-        <p>Serruriers experts intervenant en moins de 30 minutes, <strong>quelle que soit votre ville en France</strong>. Disponibilité totale 7j/7.</p>
-        <br>
+<section class="hero">
+    <span class="status-green">● Intervention en 30 minute serrurier a 12 km de chez vous</span>
+    <h1>Serrurier Urgence 24/7</h1>
+    <p>Porte claquée, serrure cassée, ou forcée ? Notre équipe intervient en urgence dans votre secteur 24/7.</p>
+    
+    <div class="cta-box">
         <a href="tel:0753673866" class="cta-main">
-            APPEL D'URGENCE NATIONAL
+            APPEL URGENCE
             <span>07 53 67 38 66</span>
         </a>
-    </section>
-
-    <main class="content-section">
-        <h2>Nos Services de Serrurerie Nationale</h2>
-        <div class="gallery">
-            <div class="service-card">
-                <h3>Ouverture de porte</h3>
-                <p>Claquée ou verrouillée sans dégâts</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Changement de serrure</h3>
-                <p>Toutes marques & haute sécurité</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Blindage de porte</h3>
-                <p>Sécurité renforcée A2P</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Volet & Rideau métallique</h3>
-                <p>Déblocage express et réparation</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Boîte aux lettres</h3>
-                <p>Ouverture et remplacement de barillet</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Ouverture de coffre-fort</h3>
-                <p>Expertise technique spécialisée</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Verrous sur fenêtres</h3>
-                <p>Protection anti-effraction efficace</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Installation ferme-portes</h3>
-                <p>Pour résidences et commerces</p>
-            </div>
-        </div>
-    </main>
-
-    <div class="marquee-wrapper bottom">
-        <div style="text-align: center; margin-bottom: 10px; font-size: 0.8rem; font-weight: bold; color: #94a3b8;">AGRÉÉ TOUTES ASSURANCES</div>
-        <div class="marquee">
-            <span>AXA</span><span>ALLIANZ</span><span>MAIF</span><span>MACIF</span><span>GENERALI</span><span>MMA</span><span>MATMUT</span><span>GMF</span>
-            <span>AXA</span><span>ALLIANZ</span><span>MAIF</span><span>MACIF</span><span>GENERALI</span><span>MMA</span><span>MATMUT</span><span>GMF</span>
-        </div>
+        <div class="insurance-tag">AGRÉÉ ASSURANCES : ALLIANZ, AXA, MAIF...</div>
     </div>
+</section>
 
-    <footer class="legal-section">
-        <div class="legal-grid">
-            <div>
-                <h2>SOS SERRURIER FRANCE</h2>
-                <p>Leader national du dépannage serrurerie. Une couverture réseau sur tout le territoire français pour une intervention immédiate.</p>
-            </div>
-            <div>
-                <h2>Mentions Légales</h2>
-                <p>Éditeur : SOS Serrurier France<br>
-                Siège Social : France (Intervention Nationale)<br>
-                Hébergement : Netlify Inc.<br>
-                Contact : <a href="tel:0753673866">07 53 67 38 66</a></p>
-            </div>
-            <div>
-                <h2>National & 24/7</h2>
-                <p>Artisans déployés dans toutes les régions de France pour répondre à vos urgences, même la nuit et les jours fériés.</p>
-            </div>
-        </div>
-        <p style="text-align: center; margin-top: 30px; opacity: 0.5;">© 2026 SOS SERRURIER FRANCE - Tous droits réservés.</p>
-    </footer>
-
-    <div id="cookie-v2">
-        <div class="cookie-title">🍪 Gestion des cookies</div>
-        <div class="cookie-text">
-            Pour améliorer votre expérience et mesurer notre audience, nous utilisons des cookies. Vous pouvez accepter ou refuser leur utilisation selon les normes de Google Consent Mode V2.
-        </div>
-        <div class="cookie-btns">
-            <button class="btn-cookie btn-accept" onclick="acceptCookies()">Tout accepter</button>
-            <button class="btn-cookie btn-refuse" onclick="refuseCookies()">Tout refuser</button>
-        </div>
+<div class="grid-container">
+    <div class="bento-grid">
+        <div class="bento-item"><h3>🔑 Porte Claquée</h3><p>Ouverture express sans destruction. Techniciens équipés pour toutes marques.</p></div>
+        <div class="bento-item"><h3>🔒 Serrure Cassée</h3><p>Remplacement de cylindre et mise en sécurité immédiate après diagnostic.</p></div>
+        <div class="bento-item"><h3>🛡️ Porte Forcée</h3><p>Réparation après effraction et installation de serrures haute sécurité A2P.</p></div>
     </div>
+</div>
 
-    <div class="sticky-action">
-        <div class="dispo-status">
-            <span class="dispo-dot"></span>
-            FRANCE 24/7
-        </div>
-        <a href="tel:0753673866" class="btn-call-fixed">📞 APPELER 24h/24</a>
+<div class="insurance-footer">
+    AGRÉÉ TOUTES ASSURANCES EN FRANCE
+</div>
+
+<footer class="footer-content">
+    <div class="mentions-section">
+        <h4>Mentions Légales</h4>
+        <p><strong>Éditeur :</strong> SOS Serrurier Services - 06 Alpes-Maritimes & 83 Var.</p>
+        <p><strong>Hébergement :</strong> Github Pages / Google Infrastructure.</p>
+        <p><strong>Protection des données :</strong> Conformément au RGPD, aucune donnée personnelle n'est conservée sans votre consentement via le bandeau cookie.</p>
+        <p><strong>Tarifs :</strong> Tarification selon intervention, majoration possible nuit et jours fériés.</p>
     </div>
+</footer>
 
-    <script>
-        // Gestion Cookies V2
-        const cookieBanner = document.getElementById('cookie-v2');
+<div id="cookie-banner">
+    <p><strong>Gestion des cookies</strong><br>Nous utilisons des cookies pour analyser notre trafic et optimiser vos appels d'urgence.</p>
+    <div class="cookie-btns">
+        <button class="btn-cookie btn-refuse" onclick="handleConsent('denied')">Refuser</button>
+        <button class="btn-cookie btn-accept" onclick="handleConsent('granted')">Accepter</button>
+    </div>
+</div>
 
-        window.onload = function() {
-            if (!localStorage.getItem('cookies-consent')) {
-                cookieBanner.style.display = 'block';
-            }
-        };
+<div class="sticky-action">
+    <a href="tel:0753673866" class="btn-call-fixed">📞 CLIQUER POUR APPELER : 07 53 67 38 66</a>
+</div>
 
-        function acceptCookies() {
-            localStorage.setItem('cookies-consent', 'accepted');
-            cookieBanner.style.display = 'none';
-            // Ici, vous pouvez déclencher le chargement de vos scripts GTAG si besoin
+<script>
+    // Logique Cookie Consent Mode V2
+    function handleConsent(status) {
+        gtag('consent', 'update', {
+            'ad_storage': status,
+            'ad_user_data': status,
+            'ad_ads_optimization': status,
+            'ad_personalization': status,
+            'analytics_storage': status
+        });
+        localStorage.setItem('cookieConsent', status);
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    // Afficher le bandeau si pas de choix stocké
+    window.onload = function() {
+        if (!localStorage.getItem('cookieConsent')) {
+            document.getElementById('cookie-banner').style.display = 'block';
         }
-
-        function refuseCookies() {
-            localStorage.setItem('cookies-consent', 'refused');
-            cookieBanner.style.display = 'none';
-        }
-    </script>
+    };
+</script>
 
 </body>
 </html>
